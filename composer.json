@@ -1,0 +1,12 @@
+{
+  "name": "foamycastle/provider",
+  "description": "A base class on which a data provider can be built",
+  "autoload": {
+    "psr-4": {
+      "FoamyCastle\\Provider\\": "src/Provider"
+    }
+  },
+  "require": {
+    "php": "^8.4"
+  }
+}
