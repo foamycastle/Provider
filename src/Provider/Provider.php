@@ -10,12 +10,17 @@ abstract class Provider implements ProviderContract
     protected mixed $data;
 
     /**
-     * a string containing a user-generated error message
+     * a string containing a user-generated error message. error message is clear upon read
      * @var string
      */
     protected string $errorString {
         set(string $errorString){
             $this->errorString = $errorString;
+        }
+        get{
+            $temp = $this->errorString;
+            $this->errorString = "";
+            return $temp;
         }
     }
 
@@ -26,6 +31,11 @@ abstract class Provider implements ProviderContract
     protected int $errorNumber{
         set(int $errorNumber){
             $this->errorNumber = $errorNumber;
+        }
+        get {
+            $temp = $this->errorNumber;
+            $this->errorNumber = 0;
+            return $temp;
         }
     }
 
