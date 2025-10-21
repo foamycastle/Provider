@@ -37,4 +37,10 @@ interface NumberProviderContract
      * @return self
      */
     function invert():self;
+
+    /**
+     * The generated data
+     * @return int|float
+     */
+    function getValue(): mixed;
 }

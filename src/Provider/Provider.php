@@ -4,6 +4,18 @@ namespace FoamyCastle\Provider;
 
 abstract class Provider implements ProviderContract
 {
+    /**
+     * Set to true when the provider has performed its responsibility.
+     * Set to false after the data has been read.
+     * @var bool
+     */
+    protected bool $dataFresh = false;
+
+    /**
+     * Indicates that data has been calculated or gather and is read to be read
+     * @var bool
+     */
+    protected bool $dataExists = false;
 
     /**
      * a string containing a user-generated error message. error message is clear upon read
@@ -34,11 +46,7 @@ abstract class Provider implements ProviderContract
             return $temp;
         }
     }
-    /**
-     * Indicates the input data is an array
-     * @var bool
-     */
-    protected bool $isArray = false;
+    protected int $data;
 
 
 }
