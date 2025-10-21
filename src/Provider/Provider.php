@@ -4,10 +4,6 @@ namespace FoamyCastle\Provider;
 
 abstract class Provider implements ProviderContract
 {
-    /**
-     * @var mixed $data a temporary cache for generated data
-     */
-    protected mixed $data;
 
     /**
      * a string containing a user-generated error message. error message is clear upon read
@@ -38,7 +34,11 @@ abstract class Provider implements ProviderContract
             return $temp;
         }
     }
-
+    /**
+     * Indicates the input data is an array
+     * @var bool
+     */
+    protected bool $isArray = false;
 
 
 }
