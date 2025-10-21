@@ -1,6 +1,7 @@
 {
   "name": "foamycastle/provider",
   "description": "A base class on which a data provider can be built",
+  "license": "GPL-3.0-or-later",
   "autoload": {
     "psr-4": {
       "FoamyCastle\\Provider\\": "src/Provider"
