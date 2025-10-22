@@ -18,10 +18,13 @@ include '../vendor/autoload.php';
 //After a call to refresh via the provide method, expect a different value to be return
     echo "call to provide with refresh=true".PHP_EOL;
     $provide = $tester->provide(true);
+
     echo "getValue() and provide() ".($getValue==$provide ? 'give ':'do not give ')."the same value" .PHP_EOL;
     echo "time value after refresh: ".$provide.PHP_EOL;
 
 //Test bitwise functions
 
-    echo "bit shift right: ". $shiftR=$tester->shiftRight(32)->getValue() .PHP_EOL;
+    echo "bit shift right: ". $shiftR=$tester->shiftRight(48)->getValue() .PHP_EOL;
     echo "hex output: ".dechex($shiftR).PHP_EOL;
+
+//Continued calls
