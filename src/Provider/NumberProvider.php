@@ -7,11 +7,15 @@ use FoamyCastle\Provider\Provider;
 abstract class NumberProvider extends Provider implements NumberProviderContract
 {
     /**
+     * @var int holds the result of calculations
+     */
+    protected int $processedValue;
+    /**
      * @inheritDoc
      */
     function shiftLeft(int $byBits): \FoamyCastle\Provider\NumberProviderContract
     {
-        $this->data <<= $byBits;
+        $this->processedValue=$this->data << $byBits;
         return $this;
     }
 
@@ -20,7 +24,7 @@ abstract class NumberProvider extends Provider implements NumberProviderContract
      */
     function shiftRight(int $byBits): \FoamyCastle\Provider\NumberProviderContract
     {
-        $this->data >>= $byBits;
+        $this->processedValue=$this->data >> $byBits;
         return $this;
     }
 
@@ -29,7 +33,7 @@ abstract class NumberProvider extends Provider implements NumberProviderContract
      */
     function andOp(int $andValue): \FoamyCastle\Provider\NumberProviderContract
     {
-        $this->data &= $andValue;
+        $this->processedValue=$this->data & $andValue;
         return $this;
     }
 
@@ -38,7 +42,7 @@ abstract class NumberProvider extends Provider implements NumberProviderContract
      */
     function orOp(int $orValue): \FoamyCastle\Provider\NumberProviderContract
     {
-        $this->data |= $orValue;
+        $this->processedValue=$this->data | $orValue;
         return $this;
     }
 
@@ -47,7 +51,7 @@ abstract class NumberProvider extends Provider implements NumberProviderContract
      */
     function invert(): \FoamyCastle\Provider\NumberProviderContract
     {
-        $this->data = ~$this->data;
+        $this->processedValue = ~$this->data;
         return $this;
     }
 }

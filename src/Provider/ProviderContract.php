@@ -7,9 +7,9 @@ interface ProviderContract
     /**
      * Regenerate the data for which the provider is responsible
      * @param ...$options array required arguments presented as a hash table
-     * @return $this
+     * @return void
      */
-    function refresh(...$options): static;
+    function refresh(...$options): void;
     /**
      * Provide data
      * @param bool $fresh triggers a data refresh if true
