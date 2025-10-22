@@ -11,7 +11,7 @@ abstract class NumberProvider extends Provider implements NumberProviderContract
      */
     function shiftLeft(int $byBits): \FoamyCastle\Provider\NumberProviderContract
     {
-        $this->data >>= $byBits;
+        $this->data <<= $byBits;
         return $this;
     }
 
@@ -20,7 +20,7 @@ abstract class NumberProvider extends Provider implements NumberProviderContract
      */
     function shiftRight(int $byBits): \FoamyCastle\Provider\NumberProviderContract
     {
-        $this->data <<= $byBits;
+        $this->data >>= $byBits;
         return $this;
     }
 
