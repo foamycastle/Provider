@@ -46,7 +46,7 @@ abstract class Provider implements ProviderContract
             return $temp;
         }
     }
-    protected int $data;
+    protected mixed $data;
 
 
 }
