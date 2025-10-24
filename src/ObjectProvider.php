@@ -1,11 +1,12 @@
 <?php
 
-namespace FoamyCastle\Provider;
+namespace Foamycastle\Provider;
 
 use ReflectionObject;
+use function array_any;
 use function get_class;
 use function strtolower;
-use function array_any;
+
 abstract class ObjectProvider extends Provider implements ObjectProviderContract
 {
 

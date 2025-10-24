@@ -1,6 +1,6 @@
 <?php
 
-namespace FoamyCastle\Provider;
+namespace Foamycastle\Provider;
 
 abstract class Provider implements ProviderContract
 {

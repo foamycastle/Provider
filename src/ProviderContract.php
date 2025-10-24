@@ -1,6 +1,6 @@
 <?php
 
-namespace FoamyCastle\Provider;
+namespace Foamycastle\Provider;
 
 interface ProviderContract
 {
