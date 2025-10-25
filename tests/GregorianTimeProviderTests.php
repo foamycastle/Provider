@@ -1,6 +1,6 @@
 <?php
 
-use FoamyCastle\Utilities\Providers\GregorianTimeProvider;
+use Foamycastle\Utilities\Providers\GregorianTimeProvider;
 
 include '../vendor/autoload.php';
 
