@@ -47,6 +47,17 @@ abstract class Provider implements ProviderContract
         }
     }
     protected mixed $data;
+    public protected(set) string $dataType{
+        get{
+            if(is_object($this->data)){
+                return get_class($this->data);
+            }
+            return gettype($this->data);
+        }
+        set{
+
+        }
+    }
 
 
 }
