@@ -12,7 +12,7 @@ const NETWORK_ADAPTER_COMMANDS=[
     ],
     //Windows commands
     'WIN'=>[
-        ['ipconfig /all | findstr "Physical Address"']
+        ['ipconfig /all | findstr "Physical Address"','/(?i)(?>(?:Physical Address)(?:(?:. )*: ))([a-f0-9(\-:)]{17})/']
     ],
     //Mac OS Commands
     'DAR'=>[
@@ -24,6 +24,8 @@ const NETWORK_ADAPTER_COMMANDS=[
     ]
 
 ];
+
+const HW_ADDRESS = "ethernet_hardware_addresses";
 
 
 
